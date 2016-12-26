@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Redis分布式锁
  *
- * @author liuchunlong <631521383@qq.com></>
+ * @author liuchunlong(631521383@qq.com)
  */
 public class RedisLock {
 
@@ -117,7 +117,7 @@ public class RedisLock {
      * 请求分布式锁
      * @param jedis     Jedis对象
      * @return          请求到锁返回true,超时返回false
-     * @throws InterruptedException
+     * @throws InterruptedException     线程中断异常
      *          线程中断异常
      */
     protected synchronized boolean acquire(Jedis jedis) throws InterruptedException {
@@ -162,7 +162,7 @@ public class RedisLock {
     /**
      * 重新获取锁
      * @return          如果取得锁返回true,否则返回false
-     * @throws InterruptedException
+     * @throws InterruptedException     线程中断异常
      */
     public boolean renew() throws InterruptedException {
 
@@ -189,7 +189,7 @@ public class RedisLock {
 
     /**
      * 判断当前是否获取锁
-     * @return
+     * @return  返回布尔类型的值,是否已获得锁
      */
     public synchronized boolean isLocked() {
         return this.lock != null;
@@ -214,7 +214,7 @@ public class RedisLock {
         /**
          * 解析字符串,根据指定的UUID值和过期时间构造Lock
          * @param text  字符串参数,参数格式:"*:*"
-         * @return      Lock
+         * @return      Lock    字符串转化的锁对象
          */
         protected static Lock fromString(String text) {
 
@@ -251,8 +251,8 @@ public class RedisLock {
 
         /**
          * 判断锁是否超时或者锁是当前线程拥有的锁
-         * @param otherUUID
-         * @return
+         * @param otherUUID     锁的唯一标识
+         * @return      返回布尔类型的值
          */
         boolean isExpiredOrMine(UUID otherUUID) {
             return this.isExpired() || this.getUUID().equals(otherUUID);
