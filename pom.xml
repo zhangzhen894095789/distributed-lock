@@ -4,9 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+
     <groupId>com.github.okeyj</groupId>
     <artifactId>redis-jedis-lock</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>redis-jedis-lock</name>
     <description>distributed lock by redis</description>
@@ -21,6 +28,12 @@
         </license>
     </licenses>
 
+
+    <issueManagement>
+        <system>github</system>
+        <url>https://github.com/OkeyJ/redis-jedis-lock/issues</url>
+    </issueManagement>
+
     <developers>
         <developer>
             <name>OkeyJ</name>
@@ -31,11 +44,11 @@
         </developer>
     </developers>
 
-
     <scm>
-        <connection></connection>
-        <developerConnection></developerConnection>
-        <url></url>
+        <url>https://github.com/OkeyJ/redis-jedis-lock</url>
+        <connection>scm:git@github.com:OkeyJ/redis-jedis-lock.git</connection>
+        <developerConnection>scm:git@github.com:OkeyJ/redis-jedis-lock.git</developerConnection>
+        <tag/><!-- 默认HEAD -->
     </scm>
 
 
@@ -74,6 +87,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
             </plugin>
         </plugins>
 
