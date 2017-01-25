@@ -8,7 +8,7 @@ redis-jedis-lock使用起来非常简便,它是使用Redis数据库和Jedis驱�
 <dependency>
     <groupId>com.github.okeyj</groupId>
     <artifactId>redis-jedis-lock</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <type>jar</type>
     <scope>compile</scope>
 </dependency>

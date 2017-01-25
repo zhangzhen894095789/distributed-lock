@@ -8,6 +8,9 @@
         <version>7</version>
     </parent>
 
+    <properties>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
 
     <groupId>com.github.okeyj</groupId>
     <artifactId>redis-jedis-lock</artifactId>
@@ -29,12 +32,12 @@
 
     <issueManagement>
         <system>github</system>
-        <url>https://github.com/OkeyJ/redis-jedis-lock/issues</url>
+        <url>https://github.com/okeyj/redis-jedis-lock/issues</url>
     </issueManagement>
 
     <developers>
         <developer>
-            <name>OkeyJ</name>
+            <name>okeyj</name>
             <email>631521383@qq.com</email>
             <roles>
                 <role>Project Manager</role>
@@ -43,9 +46,9 @@
     </developers>
 
     <scm>
-        <url>git@github.com:OkeyJ/redis-jedis-lock.git</url>
-        <connection>scm:git:git@github.com:OkeyJ/redis-jedis-lock.git</connection>
-        <developerConnection>scm:git:git@github.com:OkeyJ/redis-jedis-lock.git</developerConnection>
+        <url>git@github.com:okeyj/redis-jedis-lock.git</url>
+        <connection>scm:git:git@github.com:okeyj/redis-jedis-lock.git</connection>
+        <developerConnection>scm:git:git@github.com:okeyj/redis-jedis-lock.git</developerConnection>
         <tag />
     </scm>
 
