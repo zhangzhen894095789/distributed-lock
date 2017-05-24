@@ -1,6 +1,6 @@
-package com.github.redis.jedis.lock.integration;
+package com.github.itTalks.redis.jedis.lock.integration;
 
-import com.github.redis.jedis.lock.RedisLock;
+import com.github.itTalks.redis.jedis.lock.RedisLock;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.slf4j.Logger;

@@ -12,7 +12,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <groupId>com.github.okeyj</groupId>
+    <groupId>com.github.itTalks</groupId>
     <artifactId>redis-jedis-lock</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
@@ -32,12 +32,12 @@
 
     <issueManagement>
         <system>github</system>
-        <url>https://github.com/okeyj/redis-jedis-lock/issues</url>
+        <url>https://github.com/itTalks/redis-jedis-lock/issues</url>
     </issueManagement>
 
     <developers>
         <developer>
-            <name>okeyj</name>
+            <name>itTalks</name>
             <email>631521383@qq.com</email>
             <roles>
                 <role>Project Manager</role>
@@ -46,9 +46,9 @@
     </developers>
 
     <scm>
-        <url>git@github.com:okeyj/redis-jedis-lock.git</url>
-        <connection>scm:git:git@github.com:okeyj/redis-jedis-lock.git</connection>
-        <developerConnection>scm:git:git@github.com:okeyj/redis-jedis-lock.git</developerConnection>
+        <url>git@github.com:itTalks/redis-jedis-lock.git</url>
+        <connection>scm:git:git@github.com:itTalks/redis-jedis-lock.git</connection>
+        <developerConnection>scm:git:git@github.com:itTalks/redis-jedis-lock.git</developerConnection>
         <tag />
     </scm>
 

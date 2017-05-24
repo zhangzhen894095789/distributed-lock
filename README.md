@@ -6,7 +6,7 @@ redis-jedis-lock使用起来非常简便,它是使用Redis数据库和Jedis驱�
 通过Maven依赖:
 ```
 <dependency>
-    <groupId>com.github.okeyj</groupId>
+    <groupId>com.github.itTalks</groupId>
     <artifactId>redis-jedis-lock</artifactId>
     <version>1.0.0</version>
     <type>jar</type>
@@ -50,7 +50,7 @@ try {
 ```
 
 ## 结束语
-如果您有更好的优化,欢迎联系我,631521383@qq.com. THX
+如果您有更好的优化,欢迎联系我<631521383@qq.com>. Thx.
 
 ## License
 
