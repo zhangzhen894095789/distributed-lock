@@ -1,21 +1,14 @@
-# redis-jedis-lock
-redis-jedis-lock使用起来非常简便,它是使用Redis数据库和Jedis驱动的分布式锁的简单实现
-
+# distributed_lock
+distributed_lock使用起来非常简便,它是基于Redis的分布式锁的简单实现。
 
 ## 引入
 通过Maven依赖:
-```
-<dependency>
-    <groupId>com.github.itTalks</groupId>
-    <artifactId>redis-jedis-lock</artifactId>
-    <version>1.0.0</version>
-    <type>jar</type>
-    <scope>compile</scope>
-</dependency>
+```xml
+
 ```
 
 ## 使用
-```
+```java
 GenericObjectPoolConfig poolConfig = new GenericObjectPoolConfig();
 final JedisPool pool = new JedisPool(poolConfig, host, port, timeout, password);
 Jedis jedis = pool.getResource();
@@ -45,13 +38,11 @@ try {
         }
     }
 }
-
-
 ```
+
 
 ## 结束语
 如果您有更好的优化,欢迎联系我<631521383@qq.com>. Thx.
 
 ## License
-
 The Apache Software License, Version 2.0
