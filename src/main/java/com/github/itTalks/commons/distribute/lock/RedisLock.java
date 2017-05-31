@@ -102,6 +102,24 @@ public class RedisLock {
     }
 
     /**
+     * 锁的过期时长
+     *
+     * @return
+     */
+    public int getLockExpiryInMillis() {
+        return lockExpiryInMillis;
+    }
+
+    /**
+     * 锁的请求超时时长
+     *
+     * @return
+     */
+    public int getAcquireTimeoutInMillis() {
+        return acquireTimeoutInMillis;
+    }
+
+    /**
      * 请求分布式锁
      *
      * @return 请求到锁返回true, 超时返回false
