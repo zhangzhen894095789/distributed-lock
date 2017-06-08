@@ -39,7 +39,7 @@ try {
     }
 }
 ```
-或者
+也可以使用Spring提供的RedisTemplate.
 ```java
 //获取Redis的连接
 RedisConnection redisConnection = redisTemplate.getConnectionFactory().getConnection();
