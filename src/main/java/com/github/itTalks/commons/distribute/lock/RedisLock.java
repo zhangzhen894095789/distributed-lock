@@ -170,7 +170,12 @@ public class RedisLock {
                  * 这里还有个前置条件:
                  *      会对原始锁进行校验，jedis.get()和jedis.getSet()获取的锁必须是同一锁，重新获取锁才成功
                  */
-                if (originLockValue != null && originLockValue.equals(currentLockValue)) {//TODO 当jedis.getSet()获取原始锁originLockValue为空时，应直接获取锁成功
+                //特别的，当jedis.getSet()获取原始锁originLockValue为空时，应直接获取锁成功
+                if (originLockValue == null) {
+                    this.lock = tLock;
+                    return true;
+                }
+                if (originLockValue != null && originLockValue.equals(currentLockValue)) {
                     this.lock = tLock;
                     return true;
                 }
@@ -204,7 +209,15 @@ public class RedisLock {
     }
 
     protected synchronized void release(Jedis jedis) {
-        if (isLocked()) {//TODO 存在一种情况，当前线程阻塞很长时间后再次执行，此时该线程持有的锁已经超时，并且其它线程获取了锁。这时当前线程就不应该再删除该锁
+        if (isLocked()) {
+            //存在一种情况，当前线程阻塞很长时间后再次执行，此时该线程持有的锁已经超时，并且其它线程获取了锁。这时当前线程就不应该再删除该锁
+            if (this.lock.isExpired()) {//当前线程持有的锁已经超时
+                final Lock lock = Lock.fromString(jedis.get(lockKey));//获取Redis中已存在的锁
+                final UUID uuid = lock.getUUID();
+                if (!this.lock.isMine(uuid)) {//如果Redis中已存在的锁(原始锁)不是当前线程的，则直接返回，不再释放锁
+                    return;
+                }
+            }
             jedis.del(lockKey);
             this.lock = null;
         }
@@ -273,6 +286,16 @@ public class RedisLock {
          */
         boolean isExpired() {
             return getExpiryTime() < System.currentTimeMillis();
+        }
+
+        /**
+         * 判断锁是否是当前线程拥有的锁
+         *
+         * @param otherUUID
+         * @return
+         */
+        boolean isMine(UUID otherUUID) {
+            return this.getUUID().equals(otherUUID);
         }
 
         /**
