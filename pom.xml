@@ -12,11 +12,11 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <groupId>com.github.itTalks</groupId>
+    <groupId>com.github.ittalks</groupId>
     <artifactId>distributed-lock</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
-    <name>distributed_lock</name>
+    <name>distributed-lock</name>
     <description>distributed lock by redis</description>
     <inceptionYear>2016</inceptionYear>
     <url />
@@ -32,12 +32,12 @@
 
     <issueManagement>
         <system>github</system>
-        <url>https://github.com/itTalks/distributed_lock/issues</url>
+        <url>https://github.com/ittalks/distributed-lock/issues</url>
     </issueManagement>
 
     <developers>
         <developer>
-            <name>itTalks</name>
+            <name>ittalks</name>
             <email>631521383@qq.com</email>
             <roles>
                 <role>Project Manager</role>
@@ -46,9 +46,9 @@
     </developers>
 
     <scm>
-        <url>git@github.com:itTalks/distributed_lock.git</url>
-        <connection>scm:git:git@github.com:itTalks/distributed_lock.git</connection>
-        <developerConnection>scm:git:git@github.com:itTalks/distributed_lock.git</developerConnection>
+        <url>git@github.com:ittalks/distributed-lock.git</url>
+        <connection>scm:git:git@github.com:ittalks/distributed-lock.git</connection>
+        <developerConnection>scm:git:git@github.com:ittalks/distributed-lock.git</developerConnection>
         <tag />
     </scm>
 

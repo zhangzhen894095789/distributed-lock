@@ -1,4 +1,4 @@
-package com.github.itTalks.commons.distribute.lock;
+package com.github.ittalks.commons.distribute.lock;
 
 import redis.clients.jedis.Jedis;
 

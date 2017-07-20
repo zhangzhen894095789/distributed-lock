@@ -1,5 +1,5 @@
-# distributed_lock
-distributed_lock使用起来非常简便,它是基于Redis的分布式锁的简单实现。
+# distributed-lock
+distributed-lock使用起来非常简便,它是基于Redis的分布式锁的简单实现。
 
 ## 引入
 通过Maven依赖:
