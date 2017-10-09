@@ -1,4 +1,4 @@
-package com.github.ittalks.commons.distribute.lock;
+package com.github.fnpac.commons.distribute.lock;
 
 import redis.clients.jedis.Jedis;
 

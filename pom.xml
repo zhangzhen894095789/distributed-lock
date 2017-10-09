@@ -12,7 +12,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <groupId>com.github.ittalks</groupId>
+    <groupId>com.github.fnpac</groupId>
     <artifactId>distributed-lock</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
@@ -32,12 +32,12 @@
 
     <issueManagement>
         <system>github</system>
-        <url>https://github.com/ittalks/distributed-lock/issues</url>
+        <url>https://github.com/fnpac/distributed-lock/issues</url>
     </issueManagement>
 
     <developers>
         <developer>
-            <name>ittalks</name>
+            <name>fnpac</name>
             <email>631521383@qq.com</email>
             <roles>
                 <role>Project Manager</role>
@@ -46,9 +46,9 @@
     </developers>
 
     <scm>
-        <url>git@github.com:ittalks/distributed-lock.git</url>
-        <connection>scm:git:git@github.com:ittalks/distributed-lock.git</connection>
-        <developerConnection>scm:git:git@github.com:ittalks/distributed-lock.git</developerConnection>
+        <url>git@github.com:fnpac/distributed-lock.git</url>
+        <connection>scm:git:git@github.com:fnpac/distributed-lock.git</connection>
+        <developerConnection>scm:git:git@github.com:fnpac/distributed-lock.git</developerConnection>
         <tag />
     </scm>
 
