@@ -1,4 +1,7 @@
 # distributed-lock
+
+[![Build Status](https://travis-ci.org/fnpac/distributed-lock.svg?branch=master)](https://travis-ci.org/fnpac/distributed-lock)
+
 distributed-lock使用起来非常简便,它是基于Redis的分布式锁的简单实现。
 
 ## 引入
