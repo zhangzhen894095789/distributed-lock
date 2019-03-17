@@ -99,6 +99,7 @@ public class DistributedLockForRedis_V1 {
         String result = jedis.set(this.lockKey, nLock.toString(), "NX", "PX", this.lockExpiryInMillis);
         if ("OK".equals(result)) {
             lockThreadLocal.set(nLock);
+            System.out.println(Thread.currentThread().getName() + "获得了锁"+System.currentTimeMillis());
             return true;
         }
         return false;
@@ -207,9 +208,9 @@ public class DistributedLockForRedis_V1 {
                         Collections.singletonList(cLock.toString()));
                 if (((Long) result) == 1L) {
                     lockThreadLocal.remove();
+                    System.out.println(Thread.currentThread().getName() + "释放了锁"+System.currentTimeMillis());
                     return true;
                 }
-
                 Thread.sleep(INTERVAL_TIMES);
             }
         }

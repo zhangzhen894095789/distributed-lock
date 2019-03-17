@@ -13,7 +13,7 @@ public class Test {
 
 	public static void main(String[] args) {
         Service2 service = new Service2();
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 1000; i++) {
             ThreadA2 threadA = new ThreadA2(service);
             threadA.start();
         }
