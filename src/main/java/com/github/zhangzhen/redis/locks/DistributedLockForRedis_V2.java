@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.UUID;
 
 /**
- * Created by zz on 2017/4/20.
+ * Created by zz on 2017/4/20.  此版本测试版
  */
 public class DistributedLockForRedis_V2 {
     private final JedisPool jedisPool;
@@ -84,7 +84,7 @@ public class DistributedLockForRedis_V2 {
                 // 监视lock，准备开始事务
                 conn.watch(lockKey);
                 // 通过前面返回的value值判断是不是该锁，若是该锁，则删除，释放锁
-                if (identifier.equals(conn.get(lockKey))) {
+                if (identifier != null && identifier.equals(conn.get(lockKey))) {
                     Transaction transaction = conn.multi();
                     transaction.del(lockKey);
                     List<Object> results = transaction.exec();
