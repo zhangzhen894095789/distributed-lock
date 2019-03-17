@@ -14,7 +14,7 @@ import java.util.UUID;
  * <p>
  * 不需要客户端时间同步
  */
-public class DistributedLock {
+public class DistributedLockForRedis_V1 {
 
     private static final long RETRY_BARRIER = 600; // 重试屏障，单位毫秒
     private static final long INTERVAL_TIMES = 200; // 下一次重试等待，单位毫秒
@@ -32,7 +32,7 @@ public class DistributedLock {
      * @param lockKey            锁的Key
      * @param lockExpiryInMillis 锁的过期时长，单位毫秒
      */
-    public DistributedLock(JedisPool jedisPool, String lockKey, long lockExpiryInMillis) {
+    public DistributedLockForRedis_V1(JedisPool jedisPool, String lockKey, long lockExpiryInMillis) {
         this.jedisPool = jedisPool;
         this.lockKey = lockKey;
         this.lockExpiryInMillis = lockExpiryInMillis;
@@ -46,7 +46,7 @@ public class DistributedLock {
      * @param jedisPool redis连接池
      * @param lockKey   锁的Key
      */
-    public DistributedLock(JedisPool jedisPool, String lockKey) {
+    public DistributedLockForRedis_V1(JedisPool jedisPool, String lockKey) {
         this(jedisPool, lockKey, Integer.MAX_VALUE);
     }
 

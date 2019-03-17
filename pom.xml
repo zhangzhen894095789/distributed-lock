@@ -72,6 +72,12 @@
             <artifactId>jedis</artifactId>
             <version>2.9.0</version>
         </dependency>
+            <!-- zookeeper包 -->
+	    <dependency>
+	      <groupId>org.apache.zookeeper</groupId>
+	      <artifactId>zookeeper</artifactId>
+	      <version>3.4.9</version>
+	    </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
